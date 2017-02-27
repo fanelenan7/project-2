@@ -1,0 +1,17 @@
+<h2>Edit Comment</h2>
+<div class="form">
+
+<%= form_for [@submission, @comment] do |f| %>
+  <%= f.label "Edit your comment" %>
+  <%= f.text_field :text %>
+
+  <%= f.submit :class => "submit-button"%>
+<% end %>
+</div>
+<br>
+<div class="form">
+
+<%= form_for [@submission, @comment] method: :delete do |f| %>
+  <%= f.submit "delete", class: "delete", :class => "submit-button" %>
+<% end %>
+</div>
