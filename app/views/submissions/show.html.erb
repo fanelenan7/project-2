@@ -1,16 +1,18 @@
-<p class="top">&#9668; <%= link_to "Go Back".html_safe, submissions_path %></p>
 <main>
-  <h2><%= @submission.title %></h2>
+  <show>
+    <h2><%= @submission.title %></h2>
+    <img class="image-show" src="<%= @submission.url %>">
+  </show>
+  <p><%= @submission.description %></p>
   <time>Updated by <%= @submission.user.email %> at <%= @submission.updated_at %></time><br>
-  <img src="<%= @submission.url %>">
   <% if current_user && current_user == @submission.user %><br>
-    <%= link_to "Edit Submission", edit_submission_path(@submission) %>
-    <%= link_to "Delete Submission", submission_path(@submission), method: :delete %>
+    <%= link_to "Edit Submission", edit_submission_path(@submission), :class => "hvr-outline-out" %>
+    <%= link_to "Delete Submission", submission_path(@submission), method: :delete, :class => "hvr-outline-out" %>
   <% end %>
   <div class='comments'>
-  <h3>Comments</h3>
+  <h2>Comments</h2>
   <% if current_user %>
-    <%= link_to "Add new comment", new_submission_comment_path(@submission) %>
+    <%= link_to "Add new comment", new_submission_comment_path(@submission), :class => "hvr-outline-out" %>
   <% end %>
   <% @submission.comments.each do |comment| %>
     <div>
@@ -19,8 +21,8 @@
 	<%= comment.text %>
       </p>
       <% if current_user && current_user == comment.user %>
-	<%= link_to "Edit", edit_submission_comment_path(@submission, comment) %> |
-	<%= link_to "Delete", submission_comment_path(@submission, comment), method: :delete %>
+	<%= link_to "Edit", edit_submission_comment_path(@submission, comment), :class => "hvr-outline-out" %>
+	<%= link_to "Delete", submission_comment_path(@submission, comment), method: :delete, :class => "hvr-outline-out" %>
       <% end %>
     </div>
   <% end %>

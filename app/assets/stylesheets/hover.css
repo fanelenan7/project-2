@@ -2074,11 +2074,14 @@
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
+  padding: 7px;
+  margin: 0 7px 7px auto;
+
 }
 .hvr-outline-out:before {
   content: '';
   position: absolute;
-  border: #e1e1e1 solid 4px;
+  border: #e1e1e1 solid 2px;
   top: 0;
   right: 0;
   bottom: 0;
