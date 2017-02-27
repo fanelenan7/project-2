@@ -92,3 +92,16 @@ show {
   margin-top: -10px;
   margin-bottom: 10px;
 }
+.submit-button {
+  font-family: "Cinzel";
+  background-color: #fff;
+  border: 0;
+  padding: 1px 4px 1px 4px;
+}
+.form {
+  display: flex;
+  justify-content: center;
+}
+input {
+  margin: 20px 5px 0 0;
+}
