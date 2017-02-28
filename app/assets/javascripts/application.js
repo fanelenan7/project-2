@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+// document.getElementById("copyright").write(new Date().getFullYear())

@@ -19,9 +19,12 @@
   font-family: 'Cinzel', serif;
   padding: 30px;
 }
-footer{
+footer {
   height: 40px;
-  margin: 30px;
+  margin: 80px 30px 10px auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
  a {
    text-decoration: none;
@@ -42,8 +45,7 @@ post {
   flex-direction: column;
   align-items: center;
   width: 400px;
-  height: 420px;
-  margin: 20px;
+  height: 450px;
 }
 h2 {
   /*border: 1px solid white;*/
@@ -117,6 +119,9 @@ show {
 }
 input {
   margin: 20px 5px 0 0;
+}
+#copyright {
+  color: #B2B3B2;
 }
 @media (max-width: 1000px) {
   nav {
