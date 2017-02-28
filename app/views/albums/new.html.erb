@@ -1,0 +1,12 @@
+<h2>New Album</h2>
+<div class="form">
+
+<%= form_for @album do |f| %>
+  <%= f.label "Album Title" %>
+  <%= f.text_field :title %>
+
+  <%= f.submit :class => "submit-button"%>
+<% end %>
+</div>
+<br>
+<div class="form">

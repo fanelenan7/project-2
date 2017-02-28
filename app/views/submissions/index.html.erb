@@ -1,13 +1,19 @@
-<main>
-  <submission>
+<section>
+  <aside>
+    <div class="albums-bar hvr-sweep-to-right"><%= link_to "Create an Album", new_album_path %></div>
+    <% @albums.each do |album| %>
+      <%= link_to album.title, album_path(album), :class => "albums-bar hvr-sweep-to-right" %>
+    <% end %>
+    <div class="push"></div>
+  </aside>
+  <div class="submission">
     <% @submissions.each do |submission| %>
       <post>
-        <div class="placeholder"></div>
         <h2 class="all-titles"><%= link_to submission.title, submission_path(submission), :class => "hvr-outline-out" %></h2>
         <a href="<%= submission_path(submission) %>">
         <img class="all-img" src="<%= submission.url %>"></a>
         <time>Updated by <%= submission.user.email %> at <%= submission.updated_at %></time>
       </post>
     <% end %>
-  </submission>
-</main>
+  </div>
+</section>

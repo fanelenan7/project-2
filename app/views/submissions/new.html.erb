@@ -11,6 +11,8 @@
   <%= f.label :description %>
   <%= f.text_field :description %>
 
+  <%= f.select "Assign to Album", options_for_select(@albums.map{|a| [a.title, a.id]}) %>
+
   <%= f.submit :class => "submit-button"%>
 <% end %>
 </div>

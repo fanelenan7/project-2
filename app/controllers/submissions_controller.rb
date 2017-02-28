@@ -1,14 +1,18 @@
 class SubmissionsController < ApplicationController
   def index
+    @albums = Album.all
     @submissions = Submission.all
   end
   def show
+    @album = Album.find(params[:id])
     @submission = Submission.find(params[:id])
   end
   def edit
     @submission = Submission.find(params[:id])
+    @albums = Album.all
   end
   def new
+    @album = Album.new
     @submission = Submission.new
   end
   def create

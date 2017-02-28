@@ -3,6 +3,10 @@
   <head>
     <title>Imaginarium</title>
     <%= csrf_meta_tags %>
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
     <link rel='shortcut icon' type='image/x-icon' href='http://i.imgur.com/VMyfLr6.png'/>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,6 +15,7 @@
   </head>
 
   <body>
+
     <nav>
       <logo>
         <a href="/"><img class="logo hvr-bob" src="http://i.imgur.com/RzHxCyt.png"></a>
@@ -25,9 +30,7 @@
     </nav>
     <%= yield %>
     <footer>
-      <div id="copyright">&copy <script type="text/javascript">
-  document.write(new Date().getFullYear());
-      </script> Elena Santana.</div>
+      <div id="copyright">&copy 2017 Elena Santana</div>
     </footer>
   </body>
 </html>

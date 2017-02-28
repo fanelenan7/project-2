@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require_tree .
 // document.getElementById("copyright").write(new Date().getFullYear())
+// document.getElementById("footer").write((new Date()).getFullYear())
