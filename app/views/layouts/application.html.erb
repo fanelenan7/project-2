@@ -13,8 +13,8 @@
   <body>
     <nav>
       <logo>
-      <a href="/"><img class="logo hvr-bob" src="http://i.imgur.com/RzHxCyt.png"></a>
-    </logo>
+        <a href="/"><img class="logo hvr-bob" src="http://i.imgur.com/RzHxCyt.png"></a>
+      </logo>
       <navbar>
       <% if current_user %>
         <%= link_to "Create New Submission", new_submission_path, :class => "navbar hvr-sweep-to-bottom" %><%= link_to "Log Out from #{current_user.email}", destroy_user_session_path, method: :delete, :class => "navbar hvr-sweep-to-bottom" %>
@@ -24,5 +24,7 @@
       <navbar>
     </nav>
     <%= yield %>
+    <footer>
+    </footer>
   </body>
 </html>
