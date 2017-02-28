@@ -2,7 +2,7 @@
   <submission>
     <% @submissions.each do |submission| %>
       <post>
-        <h2><%= link_to submission.title, submission_path(submission), :class => "hvr-outline-out" %></h2>
+        <h2 class="all-titles"><%= link_to submission.title, submission_path(submission), :class => "hvr-outline-out" %></h2>
         <a href="<%= submission_path(submission) %>">
         <img class="all-img" src="<%= submission.url %>"></a>
         <time>Updated by <%= submission.user.email %> at <%= submission.updated_at %></time>
