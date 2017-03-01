@@ -1,12 +1,12 @@
 <h2>New Comment</h2>
 <div class="form">
 
-<%= form_for [@submission, @comment] do |f| %>
-  <%= f.label "Your comment" %>
-  <%= f.text_field :text %>
+  <%= form_for [@submission, @comment] do |f| %>
+    <%= f.label "Your comment" %>
+    <%= f.text_field :text %>
 
-  <%= f.submit :class => "submit-button"%>
-<% end %>
+    <%= f.submit :class => "submit-button"%>
+  <% end %>
 </div>
 <br>
 <div class="form">

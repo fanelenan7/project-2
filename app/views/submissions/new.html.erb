@@ -1,20 +1,19 @@
 <h2>New Submission</h2>
 <div class="form">
 
-<%= form_for @submission do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= form_for @submission do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
 
-  <%= f.label "Image url" %>
-  <%= f.text_field :url %>
+    <%= f.label "Image url" %>
+    <%= f.text_field :url %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
 
-  <%= f.select "Assign to Album", options_for_select(@albums.map{|a| [a.title, a.id]}) %>
+    <%= f.select "Assign to Album", options_for_select(@albums.map{|a| [a.title, a.id]}) %>
 
-  <%= f.submit :class => "submit-button"%>
-<% end %>
+    <%= f.submit :class => "submit-button"%>
+  <% end %>
 </div>
 <br>
-<div class="form">

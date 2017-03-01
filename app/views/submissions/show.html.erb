@@ -1,30 +1,36 @@
 <main>
+  <!-- image + title -->
   <show>
     <h2><%= @submission.title %></h2>
     <img class="image-show" src="<%= @submission.url %>">
   </show>
+  <!-- description of the submission + timestamp -->
   <p><%= @submission.description %></p>
-  <time>Updated by <%= @submission.user.email %> at <%= @submission.updated_at %></time><br>
+  <time>Updated by <%= @submission.user.email %> at <%= @submission.updated_at %></time>
+  <br>
+
   <% if current_user && current_user == @submission.user %><br>
     <%= link_to "Edit Submission", edit_submission_path(@submission), :class => "hvr-outline-out" %>
     <%= link_to "Delete Submission", submission_path(@submission), method: :delete, :class => "hvr-outline-out" %>
   <% end %>
+
   <div class='comments'>
-  <h2>Comments</h2>
-  <% if current_user %>
-    <%= link_to "Add new comment", new_submission_comment_path(@submission), :class => "hvr-outline-out" %>
-  <% end %>
-  <% @submission.comments.each do |comment| %>
-    <div>
-      <time>Updated by <%= comment.user.email %> at <%= comment.updated_at %></time>
-      <p>
-	<%= comment.text %>
-      </p>
-      <% if current_user && current_user == comment.user %>
-	<%= link_to "Edit", edit_submission_comment_path(@submission, comment), :class => "hvr-outline-out" %>
-	<%= link_to "Delete", submission_comment_path(@submission, comment), method: :delete, :class => "hvr-outline-out" %>
-      <% end %>
-    </div>
-  <% end %>
+    <h2>Comments</h2>
+    <% if current_user %>
+      <%= link_to "Add new comment", new_submission_comment_path(@submission), :class => "hvr-outline-out" %>
+    <% end %>
+
+    <% @submission.comments.each do |comment| %>
+      <div>
+        <time>Updated by <%= comment.user.email %> at <%= comment.updated_at %></time>
+        <p><%= comment.text %></p>
+
+        <% if current_user && current_user == comment.user %>
+        	<%= link_to "Edit", edit_submission_comment_path(@submission, comment), :class => "hvr-outline-out" %>
+        	<%= link_to "Delete", submission_comment_path(@submission, comment), method: :delete, :class => "hvr-outline-out" %>
+        <% end %>
+
+      </div>
+    <% end %>
   </div>
 </main>
