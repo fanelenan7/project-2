@@ -4,8 +4,8 @@ class SubmissionsController < ApplicationController
     @submissions = Submission.all
   end
   def show
-    @album = Album.find(params[:id])
     @submission = Submission.find(params[:id])
+    # @album = Album.find(params[:album_id])
   end
   def edit
     @submission = Submission.find(params[:id])
@@ -17,11 +17,13 @@ class SubmissionsController < ApplicationController
   end
   def create
     @submission = Submission.create!(submission_params.merge(user: current_user))
+    @submission.save
     redirect_to submission_path(@submission)
   end
   def update
     @submission = Submission.find(params[:id])
-    @submission.update(submission_params.merge(user:current_user))
+    @submission.update!(submission_params.merge(user:current_user))
+    @submission.save
     redirect_to submission_path(@submission)
   end
   def destroy
@@ -31,6 +33,6 @@ class SubmissionsController < ApplicationController
   end
   private
   def submission_params
-    params.require(:submission).permit(:title, :url, :description)
+    params.require(:submission).permit(:title, :url, :description, :album_id)
   end
 end

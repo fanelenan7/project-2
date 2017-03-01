@@ -1,11 +1,16 @@
 <div class="submission">
   <% @album.submissions.each do |submission| %>
     <post>
-      <div class="placeholder"></div>
       <h2 class="all-titles"><%= link_to submission.title, submission_path(submission), :class => "hvr-outline-out" %></h2>
       <a href="<%= submission_path(submission) %>">
       <img class="all-img" src="<%= submission.url %>"></a>
       <time>Updated by <%= submission.user.email %> at <%= submission.updated_at %></time>
     </post>
   <% end %>
+  <% if current_user && current_user == @album.user %>
+</div>
+<div class="edit-bar">
+  <%= link_to "Edit Album", edit_album_path(@album), :class => "hvr-outline-out" %>
+  <%= link_to "Delete Album", album_path(@album), method: :delete, :class => "hvr-outline-out" %>
+<% end %>
 </div>

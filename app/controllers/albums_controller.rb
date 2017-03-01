@@ -13,7 +13,7 @@ class AlbumsController < ApplicationController
   end
   def create
     @album = Album.create!(album_params.merge(user: current_user))
-    redirect_to album_path(@album)
+    redirect_to "/"
   end
   def update
     @album = Album.find(params[:id])
@@ -23,7 +23,7 @@ class AlbumsController < ApplicationController
   def destroy
     @album = Album.find(params[:id])
     @album.destroy
-    redirect_to albums_path
+    redirect_to "/"
   end
   private
   def album_params
