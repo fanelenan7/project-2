@@ -1,6 +1,6 @@
 <div class="submission">
 
-  <% @album.submissions.each do |submission| %>
+  <% @album.submissions.order(Submission.arel_table["created_at"].desc).each do |submission| %>
 
     <post>
       <h2 class="all-titles"><%= link_to submission.title, submission_path(submission), :class => "hvr-outline-out" %></h2>
