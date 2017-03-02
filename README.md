@@ -1,4 +1,5 @@
 Repo: https://github.com/fanelenan7/project-2/tree/albums-new
+Screen Cast: https://youtu.be/RMYEr8lUXSY
 
 Imaginarium is a Rails web application, built for creative people to showcase their work.
 
