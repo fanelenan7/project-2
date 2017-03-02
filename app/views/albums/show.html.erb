@@ -1,3 +1,6 @@
+<show>
+  <h2><%= @album.title %></h2>
+</show>
 <div class="submission">
 
   <% @album.submissions.order(Submission.arel_table["created_at"].desc).each do |submission| %>
