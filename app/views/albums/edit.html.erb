@@ -1,12 +1,13 @@
 <h2>Edit Album</h2>
 <div class="form">
 
+  <!-- AM: You could also add a class directly to `form_for` using the `class: "form"` syntax -->
   <%= form_for @album do |f| %>
 
     <%= f.label :title %>
     <%= f.text_field :title %>
 
-    <%= f.submit :class => "submit-button"%>
+    <%= f.submit :class => "submit-button"%>  <!-- AM: Ah, you use that syntax here. Although note the way I wrote it above. You don't have to use a hash-rocket (=>) if you don't want! -->
 
   <% end %>
 

@@ -6,7 +6,7 @@
   </show>
   <!-- description of the submission + timestamp -->
   <p><%= @submission.description %></p>
-  <time>Updated by <%= @submission.user.email %> at <%= @submission.updated_at %></time>
+  <time>Updated by <%= @submission.user.email %> at <%= @submission.updated_at %></time><!-- AM: Look into using `strftime` to make a timestamp appear in a more readable, user-friendly format. -->
   <br>
 
   <% if current_user && current_user == @submission.user %><br>
