@@ -1,5 +1,5 @@
 # Project 2 Evaluation
-[inline code comments]()
+[inline code comments](https://github.com/fanelenan7/project-2/pull/1/files)
 ## Technical Requirements
 **2: Performing**
 >The app contains 2 models, with at least 1 association. At least 1 model is full CRUD.
@@ -19,4 +19,3 @@
 ## Planning / Process / Submission
 **2: Performing**
 >Submission contains clear evidence of planning, adequate documentation, include all from previous category, as well as additional information such as unsolved issues.
-
