@@ -19,6 +19,6 @@
 <div class="edit-bar">
   <%= link_to "Edit Album", edit_album_path(@album), :class => "hvr-outline-out" %>
   <%= link_to "Delete Album", album_path(@album), method: :delete, :class => "hvr-outline-out" %>
-<% end %>
+<% end %> <!-- AM: I would suggest moving the `end` after the closing <div> tag. Otherwise, if the condition is not met you will have a floating closing tag. -->
 
 </div>

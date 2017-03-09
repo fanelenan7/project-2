@@ -9,7 +9,7 @@
   </aside>
   <!-- main gallery -->
   <div class="submission">
-    <% @submissions.order(Submission.arel_table["created_at"].desc).each do |submission| %>
+    <% @submissions.order(Submission.arel_table["created_at"].desc).each do |submission| %> <!-- AM: I would consider putting the order logic in your controller (if that ends up looking cleaner). Would make your view more readable. -->
       <post>
         <h2 class="all-titles"><%= link_to submission.title, submission_path(submission), :class => "hvr-outline-out" %></h2>
         <a href="<%= submission_path(submission) %>">

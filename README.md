@@ -1,3 +1,7 @@
+<!-- AM: +1 for putting thought/effort into this readme. -->
+<!-- AM: Look into using Markdown to make your readme look more official! -->
+<!-- AM: More on Markdown here - https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet -->
+
 Repo: https://github.com/fanelenan7/project-2/tree/albums-new
 Screen Cast: https://youtu.be/RMYEr8lUXSY
 
